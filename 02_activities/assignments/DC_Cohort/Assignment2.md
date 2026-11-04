@@ -57,7 +57,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1 SCD: The Customer_Address_Type1 table stores only the customer's current address. When a customer changes their address, the existing record is updated and the previous address is overwritten. This approach is simple but does not preserve address history.
+
+Type 2 SCD: The Customer_Address_Type2 table preserves historical addresses by creating a new record whenever a customer's address changes. Each record includes an effective date, end date and an is_current indicator. This allows us to track changes over time and identify which address was valid at a particular date.
 ```
 
 ***
@@ -192,5 +194,11 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+One of the main ethical issues raised in Boykis's article is the human labour behind artificial intelligence (AI). Although AI is often presented as automated, developing these systems requires substantial human involvement, particularly in collecting and labelling training data. Much of this work is poorly recognized or compensated, raising concerns about fairness and the distribution of benefits from technological advancements.
+
+Another important issue is bias. Training datasets are created by people whose decisions may be influenced by social and cultural assumptions. As a result, AI systems can reproduce or amplify existing biases. This becomes particularly concerning when AI is used in areas such as healthcare, employment or public services, where biased decisions can have significant consequences for individuals and communities.
+
+I also think the article raises questions about accountability. When an AI system produces harmful or discriminatory outcomes, responsibility should not be attributed to the technology alone. Researchers and companies need to take responsibility for how data are collected, how models are developed and how their outputs are used.
+
+Overall, the article highlights that AI is not independent of human decisions. As these technologies become more widespread, transparency, fairness and accountability should remain central to their development and implementation.
 ```
